@@ -1,2 +1,279 @@
+.top_logo{
+    background-color: #434343;
+}
+.parent{
+    display: flex;
+}
+.sidebar{
+    background-color: #C6C6C6;
+    width: 20%;
+}
+.follow{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+}
+.slick-slide{
+    height: auto;
+}
+ul{
+    margin: 1rem 0 0 0;
+    padding: 0;
+    width: 100%;
+}
+li{
+    list-style-type: none;
+    display: block;
+}
+.panel{
+    margin: 2rem;
+    background-color: white;
+}
+.pic4_sp{
+    display: none;
+}
+.pic4_pc{
+    display: block;
+}
+.gray_panel{
+    width: 20%;
+    height: 50%;
+    margin: 1rem 2rem;
+}
+.anotoki{
+    width: 252px;
+    height: 252px;
+    object-fit: contain;
+}
+.border{
+    border: solid 1px;
+}
+.width100{
+    width: 100%;
+}
+.img_wrap{
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+}
+.img_wrap img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+}
+.panel_text{
+    position: relative;
+    color: black;
+    height: 3rem;
+    margin: 0 10px;
+    background-color: white;
+}
+b{
+    font-size: 1rem;
+}
+p{
+    margin: 0;
+}
+.side_from{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.img_panel{
+    display: grid;
+    grid-template-rows: 140px 140px;
+    grid-template-columns: 280px  205px 205px;
+}
+#people{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+#mt{
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content:center;
+}
+.column{
+    flex-direction: column;
+}
+.marg_top{
+    margin-top: 4rem;
+}
+.marg_right{
+    margin-right: 2rem;
+}
+.gray_content{
+    background-color: #7B7B7B;
+    padding: 2rem 1rem;
+    color: white;
+}
+.news_li_box{
+    width: 60%;
+    height: 70%;
+    border-left: 3px solid white;
+    margin: 1rem;
+    padding: 0 2rem;
+}
+.news_title{
+    position: relative;
+    margin: 0 auto;
+}
+.news_title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -10px;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+}
+.white_content{
+    width: 80%;
+    margin: 5rem auto;
+}
+.news_li{
+    width: 70%;
+    line-height: 3
+}
+.preset{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.marg_akahira{
+    margin-top: 1rem;
+}
+.ribon{
+    background-color: #b0824d;
+    color: white;
+    padding: 0.8rem;
+    position:relative;
+}
+.brown_button_box{
+    justify-content: space-between;
+}
+.brown_button{
+    background-color: #A29453;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    color: white;
+    border: none;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+button:hover {
+  opacity: .6;
+}
+.ribon:after{
+  content: "";
+  position:absolute;
+  top:0;
+  right:0;
+  width:0;
+  height:0;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+  border-width: 25px 15px 25px 0;
+}
+.pink_button{
+    background-color: #EB68A0;
+    color: white;
+    border-radius: 100vh;
+    border: 5px outset #e48ab1;
+    box-shadow: 0 0 0 3px white;
+}
+.merukaso{
+    padding: 1rem 5rem;
+}
+.hoshi{
+    width: 80%;
+    margin: 3rem auto;
+    display: block;
+}
+.icon_button{
+    position: relative;
+    width: 100%;
+}
+#sky::after{
+    content: url("./img/modal.png");
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+.hoshi_box{
+    background-color: #7B7B7B;
+    padding: 5px;
+}
+.food{
+    margin-top: 1rem;
+}
+.food::after{
+    content: url("./img/link.png");
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+.footer{
+    background-color: #434343;
+    color: white;
+}
+.footer img{
+    margin:0 auto;
+    padding: 2rem;
+    display: block;
+}
+.footer_text_box{
+    margin-top: 10rem;
+    padding: 2rem;
+}
+.footer_text_box b{
+    display: block;
+    margin-top: 1rem;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,.8);
+  }
+  .modal_content {
+    background-color: transparent;
+    margin: 20% auto;
+    width: 50%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+  }
+  .close_button{
+      width: 40px;
+      height: 70px;
+      padding: 10px;
+      margin: 0 0 0 auto;
+      display: block;
+  }
 @media screen and (max-width:599px){
+    .sidebar{
+        display: none;
+    }
+    .pic4_pc{
+        display: none;
+    }
+    .pic4_sp{
+        display: block;
+    }
 }
