@@ -3,26 +3,44 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
         <link rel="stylesheet" href="./css.css">
     </head>
     <body>
         <div class="top_logo">
-            <img src="./img/sappari.png">
-            <ul class="slide">
-                <li class="item">
-                    <img class="width100" src="./img/main_01.png">
-                </li>
-                <li class="item">
-                    <img class="width100" src="./img/main_02.png">
-                </li>
-                <li class="item">
-                    <img class="width100" src="./img/main_03.png">
-                </li>
-                <li class="item">
-                    <img class="width100" src="./img/main_04.png">
-                </li>
-            </ul>
+            <div class="top_logo_sp">
+                <img src="./img/sappari.png" class="sppa_menu">
+            </div>
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check" style="display: none;" onclick="icon_change()">
+                <label for="menu-btn-check" class="menu-btn">
+                    <img src="./img/sp_menu_open.png" class="open_close" id="menu_open">
+                    <img src="./img/sp_menu_close.png" class="open_close" id="menu_close" style="display: none;">
+                </label>
+                <div class="menu" style="display: none;">
+                    <ul>
+                        <li>
+                            <div class="menu_list"><a>top</a></div>
+                        </li>
+                        <li>
+                            <div class="menu_list"><a>about</a></div>
+                        </li>
+                        <li>
+                            <div class="menu_list"><a>accese</a></div>
+                        </li>
+                        <li>
+                            <div class="menu_list"><a>help</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="top_visual">
+                <img src="./img/main_01.png" style="opacity: 1; z-index: 20;">
+                <img src="./img/main_02.png" style="opacity: 0;">
+                <img src="./img/main_03.png" style="opacity: 0;">
+                <img src="./img/main_04.png" style="opacity: 0;">
+            </div>
         </div>
         <div class="parent">
             <div class="sidebar">
@@ -59,29 +77,23 @@
                             <img id="people" src="./img/pc_img_03.png">
                             <img id="mt" src="./img/pc_img_04.png">
                         </div>
-                        <div class="pic4_sp">
+                        <div class="pic4_sp" style="max-width: 300;">
                             <ul class="slide">
-                                <li class="item">
-                                    <img src="./img/sp_img_01.png">
-                                </li>
-                                <li class="item">
-                                    <img src="./img/sp_img_02.png">
-                                </li>
-                                <li class="item">
-                                    <img src="./img/sp_img_03.png">
-                                </li>
-                                <li class="item">
-                                    <img src="./img/sp_img_04.png">
-                                </li>
+                                <li><img src="./img/pc_img_01.png" style="width: 300;height: 300;"></li>
+                                <li><img src="./img/pc_img_02.png" style="width: 300;height: 300;"></li>
+                                <li><img src="./img/pc_img_03.png" style="width: 300;height: 300;"></li>
+                                <li><img src="./img/pc_img_04.png" style="width: 300;height: 300;"></li>
                             </ul>
                         </div>
-                        <iframe class="marg_top" width="100%" height="400" src="https://www.youtube.com/embed/3xqvrazVkuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="marg_top youtube" width="690" height="400" src="https://www.youtube.com/embed/3xqvrazVkuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="gray_content marg_top flex">
-                        <div class="news_title"><b>新着情報</b></div>
-                        <div class="news_li_box">
-                            <ul class="news_li">
+                <div class="gray_content marg_top flex news_sp">
+                    <div class="news_title">
+                        <b>新着情報</b>
+                    </div>
+                    <div class="news_li_box">
+                        <ul class="news_li">
                             <li><b>ジンギスカンは松尾が美味しい</b></li>
                             <li><b>札幌一番は「塩」一択</b></li>
                             <li><b>北海道赤平市が人気急上昇？</b></li>
@@ -90,7 +102,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="white_content flex">
+                <div class="white_content flex akahira_sp">
                     <img class="marg_right" src="./img/pc_img_05.png">
                     <div>
                         <div class="ribon">
@@ -110,30 +122,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="gray_content marg_top flex">
-                    <div class="panel gray_panel">
+                <div class="gray_content marg_top flex mansion_sp">
+                    <div class="panel gray_panel panel_sp">
                         <div class="img_wrap"><img src="./img/buildingjpeg.jpeg"></div>
                         <div class="panel_text">
                             <b>マンション買うならいくら？</b>
                         </div>
+                        <button class="pink_button want"><b>欲しい</b></button>
                     </div>
-                    <div class="panel gray_panel">
+                    <div class="panel gray_panel panel_sp">
                         <div class="img_wrap"><img src="./img/IMG_0643.jpeg"></div>
                         <div class="panel_text">
                             <b>あの時買えばよかったアレ</b>
                         </div>
+                        <button class="pink_button want"><b>欲しい</b></button>
                     </div>
-                    <div class="panel gray_panel">
+                    <div class="panel gray_panel panel_sp">
                         <div class="img_wrap"><img src="./img/pc_img_08.png"></div>
                         <div class="panel_text">
                             <b>売る気のないメルカソ特集</b>
                         </div>
+                        <button class="pink_button want"><b>欲しい</b></button>
                     </div>
                 </div>
                 <div class="gray_content flex" style="padding: 0 0 3rem 0;">
                     <button class="pink_button merukaso"><b>メルカソでお買い物する</b></button>
                 </div>
-                <div class="white_content flex">
+                <div class="white_content flex tokyo">
+                    <img src="./img/pc_img_09.png">
                     <div class="marg_right">
                         <div class="ribon">
                             <b>東京の空も悪くない</b>
@@ -149,28 +165,27 @@
                             <div class="modal_content">
                                 <img src="./img/sp_menu_close.png" onclick="modal_close()" class="close_button">
                                 <img class="width100" src="./img/IMG_0444.jpeg">
-                    　　　　</div>
-                    　　</div>
+                            </div>
+                        </div>
                     </div>
-                    <img src="./img/pc_img_09.png">
                 </div>
-                <div class="gray_content marg_top flex">
-                    <div class="panel gray_panel">
+                <div class="gray_content marg_top flex monoris">
+                    <div class="panel gray_panel panel_sp">
                         <div class="img_wrap"><img src="./img/pc_img_08.png"></div>
                         <div class="hoshi_box">
                             <p><b>未使用ZIPPO</b></p>
-                            <button class="pink_button hoshi"><b>欲しい</b></button>
+                            <button class="pink_button hoshi want"><b>欲しい</b></button>
                         </div>
                     </div>
-                    <div class="panel gray_panel">
+                    <div class="panel gray_panel panel_sp">
                         <div class="img_wrap"><img src="./img/pc_img_08.png"></div>
                         <div class="hoshi_box">
                             <p><b>モノリスオルゴール</b></p>
-                            <button class="pink_button hoshi"><b>欲しい</b></button>
+                            <button class="pink_button hoshi want"><b>欲しい</b></button>
                         </div>
                     </div>
                 </div>
-                <div class="white_content flex">
+                <div class="white_content flex ebi_sp">
                     <img class="marg_right" src="./img/pc_img_10.png">
                     <div>
                         <div class="ribon">
